@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="532" viewBox="0 0 860 532">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e94560">
+        <animate attributeName="stop-color" values="#e94560;#f5a623;#e94560" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#8957e5">
+        <animate attributeName="stop-color" values="#8957e5;#3178c6;#8957e5" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#f5a623">
+        <animate attributeName="stop-color" values="#f5a623;#e94560;#f5a623" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <rect width="860" height="532" rx="14" fill="url(#bg)"/>
+  <rect width="860" height="532" rx="14" fill="none" stroke="url(#glow)" stroke-width="1.5" opacity="0.4">
+    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="430" y="30" fill="#e94560" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle" letter-spacing="1">GitHub Stats</text>
+
+  <g>
+      <rect x="28" y="50" width="151.2" height="68" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="103.6" y="84" fill="#e94560" font-size="24" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">6</text>
+      <text x="103.6" y="104" fill="#8b949e" font-size="11" font-family="'Segoe UI',sans-serif" text-anchor="middle">Repos</text>
+    </g><g>
+      <rect x="191.2" y="50" width="151.2" height="68" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="266.79999999999995" y="84" fill="#f5a623" font-size="24" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">4</text>
+      <text x="266.79999999999995" y="104" fill="#8b949e" font-size="11" font-family="'Segoe UI',sans-serif" text-anchor="middle">Stars</text>
+    </g><g>
+      <rect x="354.4" y="50" width="151.2" height="68" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="430" y="84" fill="#3178c6" font-size="24" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">1</text>
+      <text x="430" y="104" fill="#8b949e" font-size="11" font-family="'Segoe UI',sans-serif" text-anchor="middle">Followers</text>
+    </g><g>
+      <rect x="517.5999999999999" y="50" width="151.2" height="68" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="593.1999999999999" y="84" fill="#178600" font-size="24" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">2</text>
+      <text x="593.1999999999999" y="104" fill="#8b949e" font-size="11" font-family="'Segoe UI',sans-serif" text-anchor="middle">PRs</text>
+    </g><g>
+      <rect x="680.8" y="50" width="151.2" height="68" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="756.4" y="84" fill="#8957e5" font-size="24" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">0</text>
+      <text x="756.4" y="104" fill="#8b949e" font-size="11" font-family="'Segoe UI',sans-serif" text-anchor="middle">Issues</text>
+    </g>
+
+  <line x1="28" y1="132" x2="832" y2="132" stroke="#30363d" stroke-width="0.5"/>
+  <text x="30" y="148" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" letter-spacing="1" font-weight="600">STREAK</text>
+  <g>
+      <rect x="28" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="158" y="186" fill="#f5a623" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">2 days</text>
+      <text x="158" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Current Streak</text>
+    </g><g>
+      <rect x="300" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="430" y="186" fill="#e94560" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">3 days</text>
+      <text x="430" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Longest Streak</text>
+    </g><g>
+      <rect x="572" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="702" y="186" fill="#3178c6" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">285</text>
+      <text x="702" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Total Contributions</text>
+    </g>
+
+  <line x1="28" y1="228" x2="832" y2="228" stroke="#30363d" stroke-width="0.5"/>
+  <text x="30" y="244" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" letter-spacing="1" font-weight="600">MOST USED LANGUAGES</text>
+  
+    <text x="28" y="270" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">JavaScript</text>
+    <rect x="128" y="258" width="654" height="16" rx="8" fill="#21262d"/>
+    <rect x="128" y="258" width="281.874" height="16" rx="8" fill="#f1e05a"/>
+    <text x="790" y="270" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">43.1%</text>
+    <text x="28" y="304" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">C#</text>
+    <rect x="128" y="292" width="654" height="16" rx="8" fill="#21262d"/>
+    <rect x="128" y="292" width="196.85399999999998" height="16" rx="8" fill="#178600"/>
+    <text x="790" y="304" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">30.1%</text>
+    <text x="28" y="338" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">HTML</text>
+    <rect x="128" y="326" width="654" height="16" rx="8" fill="#21262d"/>
+    <rect x="128" y="326" width="52.974000000000004" height="16" rx="8" fill="#e34c26"/>
+    <text x="790" y="338" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">8.1%</text>
+    <text x="28" y="372" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">TypeScript</text>
+    <rect x="128" y="360" width="654" height="16" rx="8" fill="#21262d"/>
+    <rect x="128" y="360" width="42.51" height="16" rx="8" fill="#3178c6"/>
+    <text x="790" y="372" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">6.5%</text>
+    <text x="28" y="406" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">Ruby</text>
+    <rect x="128" y="394" width="654" height="16" rx="8" fill="#21262d"/>
+    <rect x="128" y="394" width="22.236" height="16" rx="8" fill="#701516"/>
+    <text x="790" y="406" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">3.4%</text>
+
+  <line x1="28" y1="436" x2="832" y2="436" stroke="#30363d" stroke-width="0.5"/>
+
+  
+  <ellipse cx="58" cy="522" rx="18" ry="4" fill="#000" opacity="0.12"/>
+  <path d="M72,498 C88,488 94,462 84,452" fill="none" stroke="#e8923a" stroke-width="6" stroke-linecap="round">
+    <animate attributeName="d" values="M72,498 C88,488 94,462 84,452;M72,498 C92,482 98,468 88,456;M72,498 C88,488 94,462 84,452" dur="1.8s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="84" cy="452" r="4" fill="#ffffff" opacity="0.85">
+    <animate attributeName="cx" values="84;88;84" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="452;456;452" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <ellipse cx="58" cy="492" rx="22" ry="18" fill="#e8923a"/>
+  <ellipse cx="58" cy="498" rx="14" ry="12" fill="#ffffff" opacity="0.85"/>
+  <ellipse cx="48" cy="514" rx="6" ry="4" fill="#ffffff"/>
+  <ellipse cx="68" cy="514" rx="6" ry="4" fill="#ffffff"/>
+  <circle cx="58" cy="468" r="20" fill="#e8923a"/>
+  <ellipse cx="58" cy="476" rx="12" ry="9" fill="#ffffff" opacity="0.85"/>
+  <ellipse cx="58" cy="466" rx="8" ry="5" fill="#c87a2e" opacity="0.4"/>
+  <path d="M43,454 L48,438 L56,454" fill="#e8923a"/>
+  <path d="M73,454 L68,438 L60,454" fill="#e8923a"/>
+  <path d="M46,452 L48,442 L53,452" fill="#f97583" opacity="0.35"/>
+  <path d="M70,452 L68,442 L63,452" fill="#f97583" opacity="0.35"/>
+  <circle cx="51" cy="466" r="4.5" fill="#1c2128"/>
+  <circle cx="65" cy="466" r="4.5" fill="#1c2128"/>
+  <circle cx="52.5" cy="464" r="1.8" fill="white"/>
+  <circle cx="66.5" cy="464" r="1.8" fill="white"/>
+  <path d="M58,472 L56,474.5 L60,474.5 Z" fill="#f97583"/>
+  <path d="M54,476 Q56,479 58,475" fill="none" stroke="#1c2128" stroke-width="0.9" stroke-linecap="round"/>
+  <path d="M62,476 Q60,479 58,475" fill="none" stroke="#1c2128" stroke-width="0.9" stroke-linecap="round"/>
+  <line x1="44" y1="472" x2="30" y2="468" stroke="#1c2128" stroke-width="0.6" opacity="0.35"/>
+  <line x1="44" y1="475" x2="30" y2="476" stroke="#1c2128" stroke-width="0.6" opacity="0.35"/>
+  <line x1="72" y1="472" x2="86" y2="468" stroke="#1c2128" stroke-width="0.6" opacity="0.35"/>
+  <line x1="72" y1="475" x2="86" y2="476" stroke="#1c2128" stroke-width="0.6" opacity="0.35"/>
+
+  <text x="28" y="522" fill="#30363d" font-size="9" font-family="'Segoe UI',sans-serif">@akostt</text>
+</svg>
