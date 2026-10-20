@@ -2,33 +2,50 @@ import { writeFileSync } from 'fs';
 
 const TOKEN = process.env.GITHUB_TOKEN;
 const USER = 'akostt';
+const API = 'https://api.github.com';
 
 async function fetchJSON(url) {
-  const res = await fetch(url, { headers: TOKEN ? { Authorization: `token ${TOKEN}` } : {} });
+  const headers = { 'User-Agent': `${USER}-profile-stats` };
+  // Never send the GitHub token to third-party hosts.
+  if (url.startsWith(`${API}/`)) {
+    headers.Accept = 'application/vnd.github+json';
+    if (TOKEN) headers.Authorization = `Bearer ${TOKEN}`;
+  }
+  const res = await fetch(url, { headers });
   const text = await res.text();
-  try { return JSON.parse(text); } catch { return null; }
+  if (!res.ok) throw new Error(`Request failed (${res.status}) ${url}: ${text.slice(0, 200)}`);
+  return JSON.parse(text);
+}
+
+async function searchCount(query) {
+  const data = await fetchJSON(`${API}/search/issues?q=${encodeURIComponent(query)}&per_page=1`);
+  return data.total_count ?? 0;
 }
 
 async function getStats() {
-  const user = await fetchJSON(`https://api.github.com/users/${USER}`);
+  const user = await fetchJSON(`${API}/users/${USER}`);
   if (!user || user.message) return null;
 
-  let repos = [], events = [];
-  try { const r = await fetchJSON(`https://api.github.com/users/${USER}/repos?per_page=100&sort=stars&direction=desc`); if (Array.isArray(r)) repos = r; } catch {}
-  try { const e = await fetchJSON(`https://api.github.com/users/${USER}/events/public?per_page=100`); if (Array.isArray(e)) events = e; } catch {}
+  const repos = await fetchJSON(`${API}/users/${USER}/repos?per_page=100&sort=pushed&direction=desc`);
+  if (!Array.isArray(repos)) throw new Error('Unexpected repos response');
 
-  let totalStars = 0, totalIssues = 0, totalPRs = 0;
+  // Own repositories only: forks' code and stars belong to someone else.
+  const ownRepos = repos.filter(repo => !repo.fork);
+
+  // Search API returns all-time totals; the events feed only covers ~90 days.
+  const [totalPRs, totalIssues] = await Promise.all([
+    searchCount(`author:${USER} type:pr is:public`),
+    searchCount(`author:${USER} type:issue is:public`),
+  ]);
+
+  let totalStars = 0;
   const langMap = {};
 
-  for (const repo of repos) totalStars += repo.stargazers_count || 0;
-  for (const event of events) {
-    if (event.type === 'IssuesEvent' && event.payload.action === 'opened') totalIssues++;
-    if (event.type === 'PullRequestEvent' && event.payload.action === 'opened') totalPRs++;
-  }
+  for (const repo of ownRepos) totalStars += repo.stargazers_count || 0;
 
-  for (const repo of repos.slice(0, 15)) {
+  for (const repo of ownRepos) {
     try {
-      const langs = await fetchJSON(`https://api.github.com/repos/${USER}/${repo.name}/languages`);
+      const langs = await fetchJSON(`${API}/repos/${USER}/${repo.name}/languages`);
       if (langs && typeof langs === 'object') {
         for (const [lang, bytes] of Object.entries(langs)) langMap[lang] = (langMap[lang] || 0) + bytes;
       }
@@ -44,17 +61,33 @@ async function getStats() {
 
   let streak = { current: 0, longest: 0, total: 0 };
   try {
-    const contribs = await fetchJSON(`https://github-contributions-api.jogruber.de/v4/${USER}`);
+    const contribs = await fetchJSON(`https://github-contributions-api.jogruber.de/v4/${USER}?y=all`);
     if (contribs && contribs.contributions) {
-      const days = contribs.contributions;
+      // The API groups days by year (current year first) and includes future
+      // dates, so sort ascending and drop anything after today.
+      const today = new Date().toISOString().slice(0, 10);
+      const days = contribs.contributions
+        .filter(d => d.date <= today)
+        .sort((a, b) => a.date.localeCompare(b.date));
+
       streak.total = days.reduce((sum, d) => sum + d.count, 0);
-      let current = 0, longest = 0, temp = 0;
-      for (let i = days.length - 1; i >= 0; i--) {
-        if (days[i].count > 0) { temp++; if (i >= days.length - 2 && current === 0) current = temp; }
-        else { if (temp > longest) longest = temp; temp = 0; }
+
+      let longest = 0, temp = 0, prevDate = null;
+      for (const day of days) {
+        const isNextDay = prevDate && (Date.parse(day.date) - Date.parse(prevDate)) === 86400000;
+        if (day.count > 0) temp = isNextDay ? temp + 1 : 1;
+        else temp = 0;
+        if (temp > longest) longest = temp;
+        prevDate = day.date;
       }
-      if (temp > longest) longest = temp;
-      if (current === 0) current = temp;
+
+      // A streak stays alive until the end of today, so a zero-count today
+      // doesn't break it; the count starts from yesterday in that case.
+      let i = days.length - 1;
+      if (i >= 0 && days[i].date === today && days[i].count === 0) i--;
+      let current = 0;
+      while (i >= 0 && days[i].count > 0) { current++; i--; }
+
       streak.current = current;
       streak.longest = longest;
     }
@@ -118,9 +151,10 @@ function generateSVG(stats) {
   }).join('');
 
   // ─── Streak ───
+  const dayLabel = n => `${n} day${n === 1 ? '' : 's'}`;
   const streakData = [
-    { label: 'Current Streak', value: `${stats?.streak?.current ?? 0} days`, color: '#f5a623' },
-    { label: 'Longest Streak', value: `${stats?.streak?.longest ?? 0} days`, color: '#e94560' },
+    { label: 'Current Streak', value: dayLabel(stats?.streak?.current ?? 0), color: '#f5a623' },
+    { label: 'Longest Streak', value: dayLabel(stats?.streak?.longest ?? 0), color: '#e94560' },
     { label: 'Total Contributions', value: stats?.streak?.total ?? 0, color: '#3178c6' },
   ];
   const streakCardW = (contentW - cardGap * 2) / 3;
