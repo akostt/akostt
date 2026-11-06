@@ -50,7 +50,7 @@
   <text x="30" y="148" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" letter-spacing="1" font-weight="600">STREAK</text>
   <g>
       <rect x="28" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
-      <text x="158" y="186" fill="#f5a623" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">1 day</text>
+      <text x="158" y="186" fill="#f5a623" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">2 days</text>
       <text x="158" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Current Streak</text>
     </g><g>
       <rect x="300" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
@@ -58,7 +58,7 @@
       <text x="430" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Longest Streak</text>
     </g><g>
       <rect x="572" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
-      <text x="702" y="186" fill="#3178c6" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">994</text>
+      <text x="702" y="186" fill="#3178c6" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">1007</text>
       <text x="702" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Total Contributions</text>
     </g>
 
@@ -67,12 +67,12 @@
   
     <text x="28" y="270" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">C#</text>
     <rect x="128" y="258" width="654" height="16" rx="8" fill="#21262d"/>
-    <rect x="128" y="258" width="440.14199999999994" height="16" rx="8" fill="#178600"/>
-    <text x="790" y="270" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">67.3%</text>
+    <rect x="128" y="258" width="440.79600000000005" height="16" rx="8" fill="#178600"/>
+    <text x="790" y="270" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">67.4%</text>
     <text x="28" y="304" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">HTML</text>
     <rect x="128" y="292" width="654" height="16" rx="8" fill="#21262d"/>
-    <rect x="128" y="292" width="109.21799999999999" height="16" rx="8" fill="#e34c26"/>
-    <text x="790" y="304" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">16.7%</text>
+    <rect x="128" y="292" width="108.56400000000001" height="16" rx="8" fill="#e34c26"/>
+    <text x="790" y="304" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">16.6%</text>
     <text x="28" y="338" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">Python</text>
     <rect x="128" y="326" width="654" height="16" rx="8" fill="#21262d"/>
     <rect x="128" y="326" width="85.674" height="16" rx="8" fill="#3572A5"/>
