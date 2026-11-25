@@ -26,7 +26,7 @@
 
   <g>
       <rect x="28" y="50" width="151.2" height="68" rx="10" fill="#161b22" stroke="#30363d"/>
-      <text x="103.6" y="84" fill="#e94560" font-size="24" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">8</text>
+      <text x="103.6" y="84" fill="#e94560" font-size="24" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">9</text>
       <text x="103.6" y="104" fill="#8b949e" font-size="11" font-family="'Segoe UI',sans-serif" text-anchor="middle">Repos</text>
     </g><g>
       <rect x="191.2" y="50" width="151.2" height="68" rx="10" fill="#161b22" stroke="#30363d"/>
@@ -50,7 +50,7 @@
   <text x="30" y="148" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" letter-spacing="1" font-weight="600">STREAK</text>
   <g>
       <rect x="28" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
-      <text x="158" y="186" fill="#f5a623" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">2 days</text>
+      <text x="158" y="186" fill="#f5a623" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">3 days</text>
       <text x="158" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Current Streak</text>
     </g><g>
       <rect x="300" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
@@ -58,7 +58,7 @@
       <text x="430" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Longest Streak</text>
     </g><g>
       <rect x="572" y="162" width="260" height="52" rx="10" fill="#161b22" stroke="#30363d"/>
-      <text x="702" y="186" fill="#3178c6" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">1031</text>
+      <text x="702" y="186" fill="#3178c6" font-size="18" font-weight="bold" font-family="'Segoe UI',sans-serif" text-anchor="middle">1041</text>
       <text x="702" y="204" fill="#8b949e" font-size="10" font-family="'Segoe UI',sans-serif" text-anchor="middle">Total Contributions</text>
     </g>
 
@@ -67,16 +67,16 @@
   
     <text x="28" y="270" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">C#</text>
     <rect x="128" y="258" width="654" height="16" rx="8" fill="#21262d"/>
-    <rect x="128" y="258" width="444.06600000000003" height="16" rx="8" fill="#178600"/>
-    <text x="790" y="270" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">67.9%</text>
+    <rect x="128" y="258" width="449.95199999999994" height="16" rx="8" fill="#178600"/>
+    <text x="790" y="270" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">68.8%</text>
     <text x="28" y="304" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">HTML</text>
     <rect x="128" y="292" width="654" height="16" rx="8" fill="#21262d"/>
-    <rect x="128" y="292" width="107.25599999999999" height="16" rx="8" fill="#e34c26"/>
-    <text x="790" y="304" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">16.4%</text>
+    <rect x="128" y="292" width="103.986" height="16" rx="8" fill="#e34c26"/>
+    <text x="790" y="304" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">15.9%</text>
     <text x="28" y="338" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">Python</text>
     <rect x="128" y="326" width="654" height="16" rx="8" fill="#21262d"/>
-    <rect x="128" y="326" width="84.366" height="16" rx="8" fill="#3572A5"/>
-    <text x="790" y="338" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">12.9%</text>
+    <rect x="128" y="326" width="81.75" height="16" rx="8" fill="#3572A5"/>
+    <text x="790" y="338" fill="#8b949e" font-size="12" font-family="'Segoe UI',sans-serif">12.5%</text>
     <text x="28" y="372" fill="#c9d1d9" font-size="13" font-family="'Segoe UI',sans-serif">JavaScript</text>
     <rect x="128" y="360" width="654" height="16" rx="8" fill="#21262d"/>
     <rect x="128" y="360" width="9.81" height="16" rx="8" fill="#f1e05a"/>
